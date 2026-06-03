@@ -14,7 +14,7 @@ const {
  * In v6, isConnected() returns { isConnected: boolean }
  */
 export async function isFreighterInstalled() {
-  if (typeof window !== "undefined" && window.location.search.includes("demo=true")) {
+  if (typeof window !== "undefined" && (window.location.search.includes("demo=true") || sessionStorage.getItem("demo_mode") === "true")) {
     return true;
   }
   try {
@@ -36,7 +36,7 @@ export async function isFreighterInstalled() {
  * In v6, requestAccess() returns { address: string, error?: FreighterApiError }
  */
 export async function requestWalletAccess() {
-  if (typeof window !== "undefined" && window.location.search.includes("demo=true")) {
+  if (typeof window !== "undefined" && (window.location.search.includes("demo=true") || sessionStorage.getItem("demo_mode") === "true")) {
     return { address: "GBMOCKWALLETADDRESSFORSTELLARLEVELONEEXCELLE472648264" };
   }
   try {
@@ -61,7 +61,7 @@ export async function requestWalletAccess() {
  * NOT just a plain string.
  */
 export async function getConnectedPublicKey() {
-  if (typeof window !== "undefined" && window.location.search.includes("demo=true")) {
+  if (typeof window !== "undefined" && (window.location.search.includes("demo=true") || sessionStorage.getItem("demo_mode") === "true")) {
     return "GBMOCKWALLETADDRESSFORSTELLARLEVELONEEXCELLE472648264";
   }
   try {
@@ -92,7 +92,7 @@ export async function getConnectedPublicKey() {
  * @returns {Promise<string>} The network name string e.g. "TESTNET" or "PUBLIC"
  */
 export async function getConnectedNetwork() {
-  if (typeof window !== "undefined" && window.location.search.includes("demo=true")) {
+  if (typeof window !== "undefined" && (window.location.search.includes("demo=true") || sessionStorage.getItem("demo_mode") === "true")) {
     return "TESTNET";
   }
   try {
@@ -143,7 +143,7 @@ export async function getConnectedNetwork() {
  * @param {string} networkPassphrase - The Stellar network passphrase
  */
 export async function signTxWithFreighter(xdr, networkPassphrase = "Test SDF Network ; September 2015") {
-  if (typeof window !== "undefined" && window.location.search.includes("demo=true")) {
+  if (typeof window !== "undefined" && (window.location.search.includes("demo=true") || sessionStorage.getItem("demo_mode") === "true")) {
     console.log("[Mock Freighter] Simulating signing...");
     return xdr;
   }

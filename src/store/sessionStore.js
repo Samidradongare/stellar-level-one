@@ -65,7 +65,7 @@ export const useSessionStore = create((set, get) => {
         : Math.random().toString(36).substring(2, 9);
       
       const startedAt = Date.now();
-      const isDemo = typeof window !== 'undefined' && window.location.search.includes('demo=true');
+      const isDemo = typeof window !== 'undefined' && (window.location.search.includes('demo=true') || sessionStorage.getItem('demo_mode') === 'true');
       const endsAt = startedAt + (isDemo ? 10 * 1000 : duration * 60 * 1000);
       
       const newSession = {
