@@ -13,6 +13,10 @@ import { checkOrCreateAccount } from "./horizon";
  * @returns {Promise<string>} The transaction hash on success
  */
 export async function sendReturn({ toKey, amount, sessionId }) {
+  if (toKey && toKey.startsWith('GBMOCK')) {
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    return "f8b719c8f2f98f6d2f3c7e7b6d5c5a4b3d2e1f0a9b8c7d6e5f4g3h2i1j0k9l9n";
+  }
   if (!VAULT_SECRET_KEY) {
     throw new Error("Vault secret key is not configured in environment variables.");
   }

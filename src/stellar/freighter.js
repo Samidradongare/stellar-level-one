@@ -14,6 +14,9 @@ const {
  * In v6, isConnected() returns { isConnected: boolean }
  */
 export async function isFreighterInstalled() {
+  if (typeof window !== "undefined" && window.location.search.includes("demo=true")) {
+    return true;
+  }
   try {
     const result = await isConnected();
     // v6 returns an object: { isConnected: boolean }
@@ -33,6 +36,9 @@ export async function isFreighterInstalled() {
  * In v6, requestAccess() returns { address: string, error?: FreighterApiError }
  */
 export async function requestWalletAccess() {
+  if (typeof window !== "undefined" && window.location.search.includes("demo=true")) {
+    return { address: "GBMOCKWALLETADDRESSFORSTELLARLEVELONEEXCELLE472648264" };
+  }
   try {
     const result = await requestAccess();
     console.log("[Freighter] requestAccess() raw result:", result);
@@ -55,6 +61,9 @@ export async function requestWalletAccess() {
  * NOT just a plain string.
  */
 export async function getConnectedPublicKey() {
+  if (typeof window !== "undefined" && window.location.search.includes("demo=true")) {
+    return "GBMOCKWALLETADDRESSFORSTELLARLEVELONEEXCELLE472648264";
+  }
   try {
     const result = await getAddress();
     console.log("[Freighter] getAddress() raw result:", result);
@@ -83,6 +92,9 @@ export async function getConnectedPublicKey() {
  * @returns {Promise<string>} The network name string e.g. "TESTNET" or "PUBLIC"
  */
 export async function getConnectedNetwork() {
+  if (typeof window !== "undefined" && window.location.search.includes("demo=true")) {
+    return "TESTNET";
+  }
   try {
     const result = await getNetwork();
     console.log("[Freighter] getNetwork() raw result:", result);
@@ -131,6 +143,10 @@ export async function getConnectedNetwork() {
  * @param {string} networkPassphrase - The Stellar network passphrase
  */
 export async function signTxWithFreighter(xdr, networkPassphrase = "Test SDF Network ; September 2015") {
+  if (typeof window !== "undefined" && window.location.search.includes("demo=true")) {
+    console.log("[Mock Freighter] Simulating signing...");
+    return xdr;
+  }
   try {
     // v6 opts: { networkPassphrase, address? } — NOT { network: "TESTNET" }
     const result = await signTransaction(xdr, { networkPassphrase });

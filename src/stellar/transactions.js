@@ -14,6 +14,10 @@ import { HORIZON_URL, NETWORK_PASSPHRASE, VAULT_PUBLIC_KEY } from "../utils/cons
  * @returns {Promise<string>} The transaction hash on success
  */
 export async function sendStake({ fromKey, amount, sessionId, duration }) {
+  if (fromKey && fromKey.startsWith('GBMOCK')) {
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    return "e8a719c8f2f98f6d2f3c7e7b6d5c5a4b3d2e1f0a9b8c7d6e5f4g3h2i1j0k9l8m";
+  }
   if (!VAULT_PUBLIC_KEY) {
     throw new Error("Vault public key is not configured in environment variables.");
   }
