@@ -90,7 +90,7 @@ Ensure you have the **Freighter Wallet Extension** installed:
 Below are placeholders for the required submission screenshots. Save your screenshots into a `screenshots/` folder in this repository with the following filenames:
 
 #### Wallet Connected State
-![Wallet Connected](screenshots/wallet_connected.png)
+![Wallet Connected](screenshots/transaction_result.png)
 
 #### Balance Displayed
 ![Balance Displayed](screenshots/balance_displayed.png)
