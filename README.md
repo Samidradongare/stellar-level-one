@@ -96,7 +96,7 @@ Below are placeholders for the required submission screenshots. Save your screen
 ![Balance Displayed](screenshots/balance_displayed.png)
 
 #### Successful Testnet Transaction
-![Successful Transaction](screenshots/transaction_success.png)
+![Successful Transaction](https://github.com/Samidradongare/stellar-level-one/blob/3da0a8a0a121e408cadeea284f94200d3219acb9/Screenshot%202026-06-03%20195716.png)
 
 #### Transaction Result Shown to User
 ![Transaction Result](screenshots/transaction_result.png)
