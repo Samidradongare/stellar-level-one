@@ -99,7 +99,7 @@ Below are placeholders for the required submission screenshots. Save your screen
 ![Successful Transaction](https://github.com/Samidradongare/stellar-level-one/blob/3da0a8a0a121e408cadeea284f94200d3219acb9/Screenshot%202026-06-03%20195716.png)
 
 #### Transaction Result Shown to User
-![Transaction Result](screenshots/transaction_result.png)
+![Transaction Result](https://github.com/Samidradongare/stellar-level-one/blob/a92ae27be4e196ba447aaa6c2003f3b6caceba69/Screenshot%202026-06-03%20195906.png)
 
 ---
 
