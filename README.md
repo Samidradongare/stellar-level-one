@@ -93,7 +93,7 @@ Below are placeholders for the required submission screenshots. Save your screen
 ![Wallet Connected](screenshots/transaction_result.png)
 
 #### Balance Displayed
-![Balance Displayed](screenshots/balance_displayed.png)
+![Balance Displayed](https://github.com/Samidradongare/stellar-level-one/blob/83433b00d4401aa257a4e8a99805457860c2a803/Screenshot%202026-06-03%20194659.png)
 
 #### Successful Testnet Transaction
 ![Successful Transaction](https://github.com/Samidradongare/stellar-level-one/blob/3da0a8a0a121e408cadeea284f94200d3219acb9/Screenshot%202026-06-03%20195716.png)
