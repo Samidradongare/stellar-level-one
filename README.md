@@ -89,16 +89,19 @@ Ensure you have the **Freighter Wallet Extension** installed:
 
 Below are placeholders for the required submission screenshots. Save your screenshots into a `screenshots/` folder in this repository with the following filenames:
 
-|Transaction Result Shown to User | Balance Displayed |
-| :---: | :---: |
-| ![Wallet Connected](screenshots/wallet_connected.png) | ![Balance Displayed](screenshots/balance_displayed.png) |
+#### Wallet Connected State
+![Wallet Connected](screenshots/wallet_connected.png)
 
-| Successful Testnet Transaction | Wallet Connected State |
-| :---: | :---: |
-| ![Successful Transaction](screenshots/transaction_success.png) | ![Transaction Result](screenshots/transaction_result.png) |
+#### Balance Displayed
+![Balance Displayed](screenshots/balance_displayed.png)
+
+#### Successful Testnet Transaction
+![Successful Transaction](screenshots/transaction_success.png)
+
+#### Transaction Result Shown to User
+![Transaction Result](screenshots/transaction_result.png)
 
 ---
 
 ## License
 MIT License
-
